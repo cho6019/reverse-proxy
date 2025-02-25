@@ -59,4 +59,57 @@ def two_one_array():
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
+    
 
+# def add_large_arrays():
+#     N = 10**6
+    
+#     start_creation_time = time.time()
+#     a = [random.choices(random.randint(0, 100) for _ in range(N))]
+#     b = [random.choices(random.randint(0, 100) for _ in range(N))]
+#     end_creation_time = time.time()
+    
+#     start_cal_time = time.time()
+#     result = []
+#     for x, y in zip(a, b):
+#         result.append(x + y)
+#     end_cal_time = time.time()
+    
+#     return {"create_time": end_creation_time - start_creation_time,
+#              "cal_time": end_cal_time - start_cal_time}
+    
+
+@app.get("/add-large-arrays")
+def add_large_arrays():
+    N = 10 **6
+    array_creation_time, addition_time = add_arrays(generate_random_array_with_randint, N)
+    return{
+        "array_creation_time": array_creation_time,
+        "addition_time": addition_time
+    }
+
+
+
+
+def add_arrays(generate_random_array, N = 10 **6):
+    start_creation_time = time.time()
+    a = generate_random_array(N)
+    b = generate_random_array(N)
+    end_creation_time = time.time()
+    
+    start_cal_time = time.time()
+    result = [x + y for x, y in zip(a, b)]
+    end_cal_time = time.time()
+    
+    array_creation_time = end_creation_time - start_creation_time
+    addition_time = end_cal_time - start_cal_time
+    return array_creation_time, addition_time
+    
+    
+def generate_random_array_with_randint(N):
+    a = [random.randint(0, 100) for _ in range(N)]
+    return a
+    
+def generate_random_array_with_choices(N):
+    a = [random.choices(range(101), k=N)]
+    return a
