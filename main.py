@@ -1,6 +1,8 @@
 from typing import Union
 
 from fastapi import FastAPI
+import time
+import random
 
 app = FastAPI()
 
@@ -11,8 +13,8 @@ def read_root():
     b = [5, 6, 7, 8]
 
     result = []
-    for i in range(len(a)): # zip(a, b)
-        result.append(a[i] + b[i])
+    for x, y in zip(a, b): 
+        result.append(x+y)
         
     return {"Hello": result}
 
@@ -31,8 +33,27 @@ def two_dimensional_array():
         [3, 2, 1]
     ]
     
-    result = a + b
+    result = []
+    for i in range(len(a)):
+        row = []
+        for j in range(len(a[i])):
+            row.append(a[i][j] + b[i][j])
+        result.append(row)
     return {"result": result}
+
+@app.get("/two-one-array")
+def two_one_array():
+    start_time = time.time()
+    arr1 = [random.random() for _ in range(1000000)]
+    arr2 = [random.random() for _ in range(1000000)]
+    end_time = time.time()
+    create_time = end_time - start_time
+
+    start_time = time.time()
+    result = [a + b for a, b in zip(arr1, arr2)]
+    end_time = time.time()
+    cal_time = end_time - start_time
+    return {"result1": create_time, "result2": cal_time}
 
 
 @app.get("/items/{item_id}")

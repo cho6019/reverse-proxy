@@ -59,13 +59,19 @@ $ sudo docker compose stats # 성능 모니터링
 $ sudo docker compose up -d --scale web1=3
 ```
 
+
+## nginx
 ```bash
 $ sudo docker exec -it <LB_NAME> bash
 $ nginx -s reload
 ```
 
 
-
+## FastAPI
+```bash
+$ fastapi main.py
+$ 
+```
 
 
 
