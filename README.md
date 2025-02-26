@@ -68,10 +68,14 @@ $ nginx -s reload
 
 
 ## FastAPI
+- https://fastapi.tiangolo.com/
 ```bash
-$ fastapi main.py
-$ 
+$ fastapi dev main.py
 ```
 
+## PDM to requirements
+```bash
+$ pdm export -o requirements.txt --without-hashes
+```
 
 

@@ -5,7 +5,7 @@ import time
 import random
 
 app = FastAPI()
-
+N = 10 **4
 
 @app.get("/")
 def read_root():
@@ -81,7 +81,6 @@ def read_item(item_id: int, q: Union[str, None] = None):
 
 @app.get("/add-large-arrays")
 def add_large_arrays():
-    N = 10 **6
     array_creation_time, addition_time = add_arrays(generate_random_array_with_randint, N)
     return{
         "array_creation_time": array_creation_time,
