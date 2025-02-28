@@ -6,7 +6,7 @@ import random
 import numpy as np
 
 app = FastAPI()
-N = 10 **6
+N = 10 **5
 
 @app.get("/")
 def read_root():
@@ -82,49 +82,54 @@ def read_item(item_id: int, q: Union[str, None] = None):
 
 @app.get("/add-large-arrays")
 def add_large_arrays():
-    array_creation_time, addition_time = add_arrays(generate_random_array_with_choices, N)
-    return{
-        "array_creation_time": array_creation_time,
-        "addition_time": addition_time
-    }
+    return add_arrays(generate_random_array_with_choices, N)
     
-
-
-
-# def add_arrays(generate_random_array, N = 10 **6):
-#     a = generate_random_array(N)
-#     b = generate_random_array(N)
-    
-#     result = a+b
-    
-#     return result
-    
-
-def add_arrays(generate_random_array, N = 10 **6):
+def add_arrays(generate_random_array, N = 10 **5):
+    s1_time = time.time()
     a = generate_random_array(N)
     b = generate_random_array(N)
+    e1_time = time.time()
     
+    s2_time = time.time()
     result = []
     for x, y in zip(a, b):
         result.append(x + y)
+    e2_time = time.time()
     
-    return result
-    
+    return {
+        "gen_time": e1_time - s1_time,
+        "cal_time": e2_time - s2_time
+    }
     
 def generate_random_array_with_randint(N):
     a = [random.randint(0, 100) for _ in range(N)]
     return a
-    
-def generate_random_array_with_numpy(N):
-    a = np.random.choice(range(101), size = N)
-    return a
-    
-    
-    
-    
-    
+
     
 def generate_random_array_with_choices(N):
     a = random.choices(range(101), k=N)
     return a
 
+@app.get("/add-large-arrays-numpy")
+def add_large_arrays_numpy():
+    return add_arrays_2(generate_random_array_with_numpy, N)
+
+def add_arrays_2(generate_random_array, N = 10 **6):
+
+    s1_time = time.time()
+    a = generate_random_array(N)
+    b = generate_random_array(N)
+    e1_time = time.time()
+    
+    s2_time = time.time()
+    result = a+b
+    e2_time = time.time()
+    
+    return {
+        "gen_time": e1_time - s1_time,
+        "cal_time": e2_time - s2_time
+    }
+    
+def generate_random_array_with_numpy(N):
+    a = np.random.choice(range(101), size = N)
+    return a

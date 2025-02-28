@@ -1,0 +1,41 @@
+TIMESTAMP,CONTAINER,NAME,ID,CPU_PERC,MEM_USAGE,MEM_PERC,NET_IO,BLOCK_IO,PIDS
+1740723306,3bc05c864697,reverse-proxy-api-1,3bc05c864697,49.75%,83.26MiB / 100MiB,83.26%,3.38MB / 1.96MB,0B / 0B,22
+1740723306,accbbdecc98f,reverse-proxy-agent-1,accbbdecc98f,729.74%,650.5MiB / 3.785GiB,16.78%,178MB / 136MB,0B / 0B,246
+1740723306,b743b0322250,reverse-proxy-nginx-proxy-1,b743b0322250,0.16%,71.2MiB / 3.785GiB,1.84%,189MB / 219MB,0B / 0B,35
+1740723306,1de39eec77bc,reverse-proxy-controller-1,1de39eec77bc,2.14%,559.9MiB / 3.785GiB,14.45%,45.6MB / 96.2MB,0B / 0B,238
+1740723319,3bc05c864697,reverse-proxy-api-1,3bc05c864697,53.93%,83.67MiB / 100MiB,83.67%,3.38MB / 1.97MB,0B / 0B,27
+1740723319,accbbdecc98f,reverse-proxy-agent-1,accbbdecc98f,733.44%,1.575GiB / 3.785GiB,41.61%,178MB / 136MB,0B / 0B,542
+1740723319,b743b0322250,reverse-proxy-nginx-proxy-1,b743b0322250,0.17%,71.19MiB / 3.785GiB,1.84%,189MB / 219MB,0B / 0B,35
+1740723319,1de39eec77bc,reverse-proxy-controller-1,1de39eec77bc,2.99%,560.7MiB / 3.785GiB,14.47%,45.7MB / 96.2MB,0B / 0B,238
+1740723333,3bc05c864697,reverse-proxy-api-1,3bc05c864697,12.84%,83.5MiB / 100MiB,83.50%,3.43MB / 2MB,0B / 0B,27
+1740723333,accbbdecc98f,reverse-proxy-agent-1,accbbdecc98f,29.04%,1.854GiB / 3.785GiB,48.97%,178MB / 136MB,0B / 0B,1828
+1740723333,b743b0322250,reverse-proxy-nginx-proxy-1,b743b0322250,2.21%,69.96MiB / 3.785GiB,1.80%,190MB / 219MB,0B / 0B,35
+1740723333,1de39eec77bc,reverse-proxy-controller-1,1de39eec77bc,19.73%,561.9MiB / 3.785GiB,14.50%,45.8MB / 96.2MB,0B / 0B,239
+1740723346,3bc05c864697,reverse-proxy-api-1,3bc05c864697,35.26%,99.62MiB / 100MiB,99.62%,3.64MB / 2.12MB,0B / 0B,52
+1740723346,accbbdecc98f,reverse-proxy-agent-1,accbbdecc98f,7.20%,1.854GiB / 3.785GiB,48.98%,179MB / 136MB,0B / 0B,1828
+1740723346,b743b0322250,reverse-proxy-nginx-proxy-1,b743b0322250,0.29%,70.42MiB / 3.785GiB,1.82%,190MB / 220MB,0B / 0B,35
+1740723346,1de39eec77bc,reverse-proxy-controller-1,1de39eec77bc,1.86%,555MiB / 3.785GiB,14.32%,45.9MB / 96.3MB,0B / 0B,249
+1740723359,accbbdecc98f,reverse-proxy-agent-1,accbbdecc98f,13.42%,1.859GiB / 3.785GiB,49.12%,179MB / 137MB,0B / 0B,1828
+1740723359,b743b0322250,reverse-proxy-nginx-proxy-1,b743b0322250,1.19%,115.8MiB / 3.785GiB,2.99%,190MB / 220MB,0B / 0B,43
+1740723359,1de39eec77bc,reverse-proxy-controller-1,1de39eec77bc,3.09%,555.6MiB / 3.785GiB,14.33%,46.1MB / 96.3MB,0B / 0B,249
+1740723371,accbbdecc98f,reverse-proxy-agent-1,accbbdecc98f,42.77%,1.871GiB / 3.785GiB,49.42%,179MB / 137MB,0B / 0B,1828
+1740723371,b743b0322250,reverse-proxy-nginx-proxy-1,b743b0322250,4.10%,116MiB / 3.785GiB,2.99%,190MB / 220MB,0B / 0B,43
+1740723371,1de39eec77bc,reverse-proxy-controller-1,1de39eec77bc,1.71%,556.2MiB / 3.785GiB,14.35%,46.3MB / 96.4MB,0B / 0B,249
+1740723384,accbbdecc98f,reverse-proxy-agent-1,accbbdecc98f,0.20%,119.9MiB / 3.785GiB,3.09%,180MB / 138MB,0B / 0B,44
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
